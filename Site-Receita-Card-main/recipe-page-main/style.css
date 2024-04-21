@@ -1,0 +1,298 @@
+:root {
+    --body-bg: hsl(30, 54%, 90%);
+    --cont-bg: hsl(0, 0%, 100%);
+    --color3: hsl(330, 100%, 98%);
+    --color4: hsl(30, 18%, 87%);
+    --color5: hsl(30, 10%, 34%);
+    --heading-clr: hsl(24, 5%, 18%);
+    --color7: hsl(14, 45%, 36%);
+    --color8: hsl(332, 51%, 32%);
+}
+
+  *, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    font-family: "Outfit-Regular";
+}
+
+@font-face {
+    font-family: "Outfit-Regular";
+    src: local("Outfit-Regular"), local("Outfit-Regular"), url(./assets/fonts/outfit/static/Outfit-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "YoungSerif-Regular";
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Outfit-Light";
+    src: local("Outfit-Light"), local("Outfit-Light"), url("./assets/fonts/outfit/static/Outfit-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Outfit-SemiBold";
+    src: local("Outfit-SemiBold"), local("Outfit-SemiBold"), url(./assets/fonts/outfit/static/Outfit-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Outfit-Medium";
+    src: local("Outfit-Medium"), local("Outfit-Medium"), url(./assets/fonts/outfit/static/Outfit-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Outfit-Bold";
+    src: local("Outfit-Bold"), local("Outfit-Bold"), url(./assets/fonts/outfit/static/Outfit-Bold.ttf) format("truetype");
+}
+
+html {
+    font-size: 16px;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.recipe-container {
+    background-color: var(--cont-bg);
+    display: block;
+    max-width: 44rem;
+    padding: 2.25rem;
+    border-radius: 1rem;
+}
+
+.recipe-content img {
+    display: block;
+    width: 100%;
+    border-radius: 0.55rem;
+    margin-bottom: 1.75rem;
+}
+
+.introduction_section h2 {
+    color: var(--heading-clr);
+    font-family: "YoungSerif-Regular";
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.introduction_section p {
+    color: var(--color5);
+    font-family: "Outfit-Regular";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.45rem;
+    margin-bottom: 1.8rem;
+}
+
+.timing {
+    background-color: var(--color3);
+    padding: 1.35rem;
+    border-radius: 0.45rem;
+    margin-bottom: 1.45rem;
+}
+
+.preparation_item {
+    margin-left: 0.35rem;
+}
+
+.preparation_item > span {
+    font-family: "Outfit-Bold";
+}
+.prep-time {
+    list-style-type: none; 
+}
+
+.prep-time li {
+    padding-left: 2.10rem; 
+    position: relative; 
+}
+
+.prep-time li::before {
+    content: "•"; 
+    color: var(--color8); 
+    position: absolute; 
+    font-size: 1.25rem;
+    left: 0; 
+}
+
+
+.prep-time {
+    color: var(--color5);
+    font-family: "Outfit-Regular";
+    font-size: 1rem;
+    line-height: 1.85rem;
+}
+
+.timing h3 {
+    color: var(--color8);
+    font-family: "Outfit-Bold";
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.ingredients {
+    color: var(--color7);
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: "YoungSerif-Regular";
+    margin-bottom: 0.75rem;
+}
+
+.timing > span {
+    font-family: "Outfit-Bold" !important;
+}
+
+.ingredient_section {
+    border-bottom: 1px solid var(--color4);
+    margin-bottom: 1.55rem;
+}
+
+.ingredient_list {
+    list-style-type: none; 
+}
+
+.ingredient_list li {
+    padding-left: 2.0rem; 
+    position: relative; 
+}
+
+.ingredient_list li::before {
+    content: "•"; 
+    color: var(--color7); 
+    position: absolute; 
+    font-size: 1.25rem;
+    left: 0; 
+}
+
+.ingredient_list {
+    color: var(--color5);
+    font-family: "Outfit-Regular";
+    font-size: 1rem;
+    line-height: 1.85rem;
+    margin-bottom: 1.55rem;
+}
+
+.ingredient_item {
+    margin-left: 0.35rem;
+}
+
+.instruction_section {
+    border-bottom: 1px solid var(--color4);
+    margin-bottom: 1.55rem;
+}
+
+.instructions {
+    color: var(--color7);
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: "YoungSerif-Regular";
+    margin-bottom: 0.75rem;
+}
+
+
+.instruction_list li {
+    padding-left: 1rem; 
+}
+
+.instruction_list {
+    color: var(--color5);
+    font-family: "Outfit-Regular";
+    font-size: 1rem;
+    line-height: 1.85rem;
+    margin-bottom: 1.55rem;
+}
+
+
+.instruction_list li::marker {
+    color: var(--color7);
+    font-weight: 600;
+}
+.instruction_item {
+    margin-left: 1.35rem;
+}
+
+.instruction_item > span {
+    font-family: "Outfit-Bold";
+}
+
+.add_info {
+    color: var(--color7);
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: "YoungSerif-Regular";
+    margin-bottom: 1.15rem;
+}
+
+.nutrition_section p {
+    color: var(--color5);
+    margin-bottom: 1.15rem;
+}
+
+.nutrition_container {
+    display: grid;
+    grid-template-columns: 53% 47%;
+    margin: 0.25rem 0.39rem;
+    border-bottom: 1px solid var(--color4);
+}
+
+.nutrition_name {
+    color: var(--color5);
+    padding: 0.75rem;
+    margin-left: 1.25rem;
+}
+
+.nutrition {
+    padding: 0.75rem;
+}
+
+.nutrition > span {
+    color: hsl(14, 45%, 36%);
+    font-family: "Outfit-Bold";
+}
+
+.nutrition_container:nth-last-of-type(1) {
+    border: none;
+}
+
+.attribution {
+    font-size: 0.85rem;
+    font-family: "Outfit-Regular", sans-serif;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--color5);
+}
+
+.attribution a:hover {
+    font-weight: bold;
+}
+
+.attribution p {
+    color: var(--color8);
+    margin: 0.5rem 0px;
+}
